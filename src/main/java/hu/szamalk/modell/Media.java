@@ -6,12 +6,12 @@ public class Media extends Konyv implements Cloneable{
         private UUID id;
         private int ar;
         private Kategoria kategoria;
-
-    public Media(String szerzo, String cim, int kiadasiEve, int ar, Kategoria kategoria) {
+//
+    public Media(String szerzo, String cim, int kiadasiEve, int ar, String leiras) {
         super(szerzo, cim, kiadasiEve);
         this.id = UUID.randomUUID();
         this.ar = ar;
-        this.kategoria = kategoria;
+        setKategoria(leiras);
     }
 
 
@@ -35,8 +35,8 @@ public class Media extends Konyv implements Cloneable{
         return kategoria;
     }
 
-    public void setKategoria(Kategoria kategoria) {
-        this.kategoria = kategoria;
+    public void setKategoria(String leiras) {
+        this.kategoria = new Kategoria(leiras);
     }
 
     @Override
