@@ -7,8 +7,8 @@ public class Media implements Cloneable{
         private int ar;
         private Kategoria kategoria;
 
-    public Media(UUID id, int ar, Kategoria kategoria) {
-        this.id = id;
+    public Media(int ar, Kategoria kategoria) {
+        this.id = UUID.randomUUID();
         this.ar = ar;
         this.kategoria = kategoria;
     }
