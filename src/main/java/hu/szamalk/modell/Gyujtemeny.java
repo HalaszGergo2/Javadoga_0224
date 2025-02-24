@@ -1,5 +1,9 @@
 package hu.szamalk.modell;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -23,6 +27,23 @@ public class Gyujtemeny implements Iterable{
             ferohely.remove(media);
         }else {
             System.out.println("Nincs benne az eladni próbált média a gyüjteményben.");
+        }
+    }
+
+    public FileOutputStream kiIr(){
+        try {
+            return new FileOutputStream("gyujtemeny.txt");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public FileInputStream beolvas(){
+        File beolvasott = new File("beolvasott.txt");
+        try {
+            return new FileInputStream(beolvasott);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 

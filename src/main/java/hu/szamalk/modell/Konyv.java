@@ -10,6 +10,8 @@ public class Konyv {
         this.kiadasiEve = kiadasiEve;
     }
 
+
+
     public String getSzerzo() {
         return szerzo;
     }
