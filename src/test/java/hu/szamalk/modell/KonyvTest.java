@@ -1,12 +1,14 @@
 package hu.szamalk.modell;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 
 class KonyvTest {
-
     @Test
-    private void konyvTest(){
-        Konyv konyv = new Konyv("Halász Gergő", "nincs6", 2002);
-    }
+    public void konyvTest(){
+        Konyv konyv = new Konyv("Halász Gergő", "cim", 2002);
 
+        
+    }
 }
